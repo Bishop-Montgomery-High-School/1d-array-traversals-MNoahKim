@@ -18,12 +18,20 @@ public class IndexFinder {
      */
     public int indexOfMin(int[] arr) {
         // TODO: initialize a variable to track the index of the minimum (start at 0)
+        int minValue = arr[0];
+        int indexPositionOfMinValue = 0;
 
         // TODO: loop from index 1 to arr.length - 1
         //       if arr[i] is strictly less than arr[your tracked index], update your tracked index
+        for (int i = 0; i < arr.length - 1; i++){
+            if (minValue > arr[i]){
+                indexPositionOfMinValue = i;
+                minValue = arr[i];
+            }
+        }
 
         // TODO: return the tracked index
-        return 0; // placeholder
+        return indexPositionOfMinValue; // placeholder
     }
 
     /**
@@ -42,11 +50,21 @@ public class IndexFinder {
      */
     public int indexOfMax(int[] arr) {
         // TODO: initialize a variable to track the index of the maximum (start at 0)
+        int maxValue = arr[0];
+        int indexPositionOfMaxValue = 0;
 
         // TODO: loop from index 1 to arr.length - 1
         //       if arr[i] is strictly greater than arr[your tracked index], update your tracked index
 
+
+        for (int i = 0; i < arr.length-1; i++){
+            if (maxValue < arr[i]){
+                indexPositionOfMaxValue = i;
+                maxValue = arr[i];
+            }
+        }
+
         // TODO: return the tracked index
-        return 0; // placeholder
+        return indexPositionOfMaxValue; // placeholder
     }
 }
