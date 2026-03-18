@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Shifter {
 
     /**
@@ -19,8 +21,12 @@ public class Shifter {
     public void shiftLeft(int[] arr) {
         // TODO: loop from i = 0 to arr.length - 2
         //       assign arr[i + 1] to arr[i]
+        for (int i = 0; i < arr.length-1; i ++){
+            arr[i] = arr[i+1];
+        }
 
         // TODO: set arr[arr.length - 1] to 0
+        arr[arr.length-1] = 0;
     }
 
     /**
@@ -45,7 +51,11 @@ public class Shifter {
     public void shiftRight(int[] arr) {
         // TODO: loop from i = arr.length - 1 DOWN to i = 1
         //       assign arr[i - 1] to arr[i]
+        for (int i = arr.length-1; i > 0; i--){
+            arr[i] = arr[i-1];
+        }
 
         // TODO: set arr[0] to 0
+        arr[0]  = 0;
     }
 }
